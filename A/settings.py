@@ -12,6 +12,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +55,13 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'amirbig44@gmail.com'
+EMAIL_HOST_PASSWORD = 'htiwdhxxuysrdorq'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 # Password validation
