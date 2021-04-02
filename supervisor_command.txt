@@ -12,13 +12,13 @@
 
         [program:project_name]
         user=user
-        directory=/var/www/myproject/src/
+        directory=/var/www/myproject/src/ ===> directory
         command=/var/www/myproject/bin/celery -A myproject worker -l info
-        numprocs=1
-        autostart=true
+        numprocs=1 ====> از این ورکر به چه تعداد ساخته شود
+        autostart=true ====> آیا من حق دارم از ورکر را به صورت اتوماتیک استارتش کنم
         autorestart=true
-        stdout_logfile=/var/log/myproject/celery.log
-        stderr_logfile=/var/log/myproject/celery.err.log"
+        stdout_logfile=/var/log/myproject/celery.log ===> پیغام ها
+        stderr_logfile=/var/log/myproject/celery.err.log" ===> ارورها
 
 5. create log files
         touch /var/log/myproject/celery.log

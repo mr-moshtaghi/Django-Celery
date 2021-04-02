@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 
 @shared_task
 def adding(x, y, id):
-	time.sleep(20)
+	time.sleep(5)
 	num = Number.objects.get(id=id)
 	num.result = x + y
 	num.save()
@@ -15,4 +15,4 @@ def adding(x, y, id):
 
 @shared_task
 def show():
-	send_mail('Celery', 'This is django-celery course', 'amirbig44@gmail.com', ['mongard.amir@gmail.com'])
+	send_mail('Test', 'This is a test email for django-celery-beat', 'amirbig44@gmail.com', ['mongard.amir@gmail.com'])
