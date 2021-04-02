@@ -15,4 +15,4 @@ def adding(x, y, id):
 
 @shared_task
 def show():
-	send_mail('Test', 'This is a test email for django-celery-beat', 'amirbig44@gmail.com', ['mongard.amir@gmail.com'])
+	send_mail('Test', 'This is a test email for django-celery-beat', 'mr.moshtaghi@gmail.com', ['mr.sajjad@gmail.com'])
